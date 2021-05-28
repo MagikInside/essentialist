@@ -1,0 +1,40 @@
+#header-container
+  width: 100%
+  position: fixed
+  background-color: transparent
+  #main-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 0 auto
+    border-bottom: 1px solid #d5d5d5
+    width: 100%
+    max-width: 1080px
+    padding: .5rem
+    font-weight: 200
+    a
+      text-decoration: none
+    #main-logo
+      font-family: EssenThiUltCn,Arial,sans-serif
+      font-size: 4rem
+      color: #666
+      letter-spacing: -.1em
+    #header-elements
+      display: flex
+      span, a
+        padding: 0 10px
+        color: #666
+      .welcome
+        border-right: 1px solid #d5d5d5
+        font-style: italic
+      .messages
+        border-left: 1px solid #d5d5d5
+      nav a
+        &.active
+          font-style: italic
+        &:hover
+          color: black
+
+
+
+
