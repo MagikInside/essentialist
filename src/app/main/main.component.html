@@ -8,6 +8,6 @@
       <p class="details">2 People</p>
     </figcaption>
   </figure>
-  <app-trips>Upcoming Trips</app-trips>
-  <app-trips>Past Trips</app-trips>
+  <app-trips [trips]="upcomingTrip$ | async">Upcoming Trips</app-trips>
+  <app-trips [trips]="pastTrip$ | async">Past Trips</app-trips>
 </main>

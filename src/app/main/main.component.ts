@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {TripsFacadeService} from '../trips-facade.service';
+import {Observable} from 'rxjs';
+import {Trip} from '../models/trip.model';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  upcomingTrip$: Observable<Trip[]>;
+  pastTrip$: Observable<Trip[]>;
+
+
+  constructor(private tripsFacade: TripsFacadeService) {
+    this.upcomingTrip$ = tripsFacade.upcomingTrip$;
+    this.pastTrip$ = tripsFacade.pastTrip$;
+  }
 
   ngOnInit(): void {
   }

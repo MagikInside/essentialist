@@ -8,7 +8,7 @@ import {Trip} from '../models/trip.model';
 })
 export class TripsComponent implements OnInit {
 
-  @Input() trips: Trip[] = [];
+  @Input() trips: Trip[] | null = [];
 
   constructor() { }
 
