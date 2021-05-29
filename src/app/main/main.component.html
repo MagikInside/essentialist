@@ -8,6 +8,12 @@
       <p class="details">2 People</p>
     </figcaption>
   </figure>
-  <app-trips [trips]="upcomingTrip$ | async">Upcoming Trips</app-trips>
-  <app-trips [trips]="pastTrip$ | async">Past Trips</app-trips>
+  <p-accordion>
+    <p-accordionTab header="Upcoming Trips" [selected]="true">
+      <app-trips [trips]="upcomingTrip$ | async"></app-trips>
+    </p-accordionTab>
+    <p-accordionTab header="Past Trips">
+      <app-trips [trips]="pastTrip$ | async"></app-trips>
+    </p-accordionTab>
+  </p-accordion>
 </main>
