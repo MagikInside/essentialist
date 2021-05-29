@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
 import { NewTripComponent } from './new-trip/new-trip.component';
 import { TripDetailsComponent } from './trip-details/trip-details.component';
+import { TripsComponent } from './trips/trips.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TripDetailsComponent } from './trip-details/trip-details.component';
     MainComponent,
     HeaderComponent,
     NewTripComponent,
-    TripDetailsComponent
+    TripDetailsComponent,
+    TripsComponent
   ],
   imports: [
     BrowserModule,

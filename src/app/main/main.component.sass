@@ -1,33 +1,46 @@
-figure
-  position: relative
-  height: 46rem
+#my-trips
+  width: 100%
   display: flex
-  justify-content: center
+  flex-direction: column
   align-items: center
-  margin: 0
-  overflow: hidden
-  img
-    position: absolute
-    z-index: -1
-    width: auto
-  figcaption
+
+  figure
+    position: relative
+    width: 100%
+    max-width: 1280px
+    height: 46rem
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0
+    overflow: hidden
+    img
+      position: absolute
+      z-index: -1
+      width: auto
+    figcaption
+      width: 100%
+      max-width: 1080px
+      h1, p
+        color: white
+      h1
+        font-family: Dorsa, sans-serif
+        font-size: 18rem
+        line-height: .8
+        letter-spacing: 1rem
+        margin: 8px 0
+        font-weight: normal
+      .details, .state
+        font-family: Radley, serif
+        margin: 0
+      .state
+        font-size: 1.8rem
+      .details
+        font-size: 1.6rem
+        font-style: italic
+  app-trips
+    display: block
     width: 100%
     max-width: 1080px
-    h1, p
-      color: white
-    h1
-      font-family: Dorsa, sans-serif
-      font-size: 18rem
-      line-height: .8
-      letter-spacing: 1rem
-      margin: 8px 0
-      font-weight: normal
-    .details, .state
-      font-family: Radley, serif
-      margin: 0
-    .state
-      font-size: 1.8rem
-    .details
-      font-size: 1.6rem
-      font-style: italic
-
+    border-top: solid 1px #d5d5d5
+    margin-top: 6rem

@@ -1,0 +1,8 @@
+<section>
+  <h2><ng-content></ng-content></h2>
+  <div *ngFor="let trip of trips" class="trip">
+    <p>{{trip.visibility_status}}</p>
+    <p>{{trip.title}}</p>
+    <p>{{trip.adults + trip.infants}} People</p>
+  </div>
+</section>
