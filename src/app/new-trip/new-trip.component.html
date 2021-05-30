@@ -1,1 +1,12 @@
-<p>new-trip works!</p>
+<main id="new-trip-form">
+  <h2>Add Trip</h2>
+  <h1>Start planing your next trip</h1>
+  <form class="p-input-filled">
+    <p-dropdown  class="input" placeholder="status" [options]="statusOptions" [(ngModel)]="status" optionLabel="status"></p-dropdown>
+    <input class="input" type="text" placeholder="trip title" pInputText>
+    <input class="input" type="text" placeholder="departure" pInputText>
+    <input class="input" type="text" placeholder="destination" pInputText>
+    <input class="input" type="text" placeholder="url image" pInputText>
+
+  </form>
+</main>
