@@ -10,7 +10,7 @@ describe('TripsUtilsService', () => {
   const TEST_DATE = '2021-05-29';
 
   beforeAll(() => {
-    jasmine.clock().mockDate(new Date(TEST_DATE))
+    jasmine.clock().mockDate(new Date(TEST_DATE));
   })
   beforeEach(() => {
     service = new TripsUtilsService();

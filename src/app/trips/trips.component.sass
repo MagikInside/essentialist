@@ -1,5 +1,41 @@
-h2
-  font-family: Radley, serif
-  font-size: 1.8rem
-  font-weight: lighter
-  color: #4a4a4a
+section
+
+  .trip
+    padding: 14px
+    border-left: 1px solid #ccc
+    width: 41rem
+    overflow: hidden
+    .trip-img
+      height: 28rem
+      width: 100%
+      overflow: hidden
+      margin: 0
+      padding: 0
+      img
+        width: 160%
+
+  .status, .title, .details
+    font-family: Radley, serif
+  .status
+    text-transform: uppercase
+    font-size: 1.3rem
+    font-weight: bold
+  .title
+    font-size: 3rem
+    margin: .8rem 0
+    font-weight: lighter
+  .details
+    color: #9c9c9c
+    font-size: 1.6rem
+    font-weight: lighter
+    margin: 0
+  ::ng-deep.p-carousel-prev
+    position: absolute
+    left: -25px
+  ::ng-deep.p-carousel-next
+    position: absolute
+    right: -25px
+  ::ng-deep.p-carousel-indicators
+    display: none
+
+

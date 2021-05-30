@@ -1,8 +1,13 @@
 <section>
-  <h2><ng-content></ng-content></h2>
-  <div *ngFor="let trip of trips" class="trip">
-    <p>{{trip.visibility_status}}</p>
-    <p>{{trip.title}}</p>
-    <p>{{trip.adults + trip.infants}} People</p>
-  </div>
+  <p-carousel [value]="trips!" [numVisible]="3" [numScroll]="3">
+    <ng-template let-trip pTemplate="item">
+      <div class="trip">
+        <figure class="trip-img"><img alt="Trip image" src="{{trip.image}}"></figure>
+        <p class="status">{{trip.visibility_status}}</p>
+        <h3 class="title">{{trip.title}}</h3>
+        <p class="details">{{trip.arrival_date}} to ...</p>
+        <p class="details">{{trip.adults + trip.infants}} People</p>
+      </div>
+    </ng-template>
+  </p-carousel>
 </section>

@@ -10,6 +10,7 @@ import { TripDetailsComponent } from './trip-details/trip-details.component';
 import { TripsComponent } from './trips/trips.component';
 import {AccordionModule} from 'primeng/accordion';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CarouselModule} from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AccordionModule
+    AccordionModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
