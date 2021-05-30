@@ -11,6 +11,7 @@ import { TripsComponent } from './trips/trips.component';
 import {AccordionModule} from 'primeng/accordion';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CarouselModule} from 'primeng/carousel';
+import { UnshiftFakeTripPipe } from './pipes/unshift-fake-trip.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {CarouselModule} from 'primeng/carousel';
     HeaderComponent,
     NewTripComponent,
     TripDetailsComponent,
-    TripsComponent
+    TripsComponent,
+    UnshiftFakeTripPipe
   ],
   imports: [
     BrowserModule,

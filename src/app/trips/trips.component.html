@@ -1,13 +1,21 @@
 <section>
   <p-carousel [value]="trips!" [numVisible]="3" [numScroll]="3">
     <ng-template let-trip pTemplate="item">
-      <div class="trip">
+      <div *ngIf="trip.hash!=='New Trip'" class="trip">
         <figure class="trip-img"><img alt="Trip image" src="{{trip.image}}"></figure>
         <p class="status">{{trip.visibility_status}}</p>
         <h3 class="title">{{trip.title}}</h3>
         <p class="details">{{trip.arrival_date}} to ...</p>
         <p class="details">{{trip.adults + trip.infants}} People</p>
       </div>
+      <div *ngIf="trip.hash==='New Trip'" class="new-trip">
+        <div class="claim">
+          <p>Start planing</p>
+          <p>your next trip</p>
+        </div>
+        <a class="add-trip">ADD TRIP</a>
+      </div>
+
     </ng-template>
   </p-carousel>
 </section>

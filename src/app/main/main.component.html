@@ -10,7 +10,7 @@
   </figure>
   <p-accordion [multiple]="true">
     <p-accordionTab header="Upcoming Trips" [selected]="true">
-      <app-trips [trips]="upcomingTrip$ | async"></app-trips>
+      <app-trips [trips]="upcomingTrip$ | async | unshiftFakeTrip: 'New Trip'"></app-trips>
     </p-accordionTab>
     <p-accordionTab header="Past Trips" [selected]="true">
       <app-trips [trips]="pastTrip$ | async"></app-trips>
