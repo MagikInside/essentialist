@@ -10,7 +10,9 @@ export class NewTripComponent implements OnInit {
   constructor() { }
 
   statusOptions = [{status: 'itinerary'}, {status: 'proposal'}];
-  status = null;
+  selectedStatus = '';
+  departure = null;
+  arrival = null;
 
   ngOnInit(): void {
   }
