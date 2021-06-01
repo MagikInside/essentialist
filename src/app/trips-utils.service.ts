@@ -14,7 +14,7 @@ export class TripsUtilsService {
   }
 
   private isPastTrip = (trip: Trip): boolean => {
-    return new Date(trip.departure_date) < new Date();
+   return trip.departureDate ? trip.departureDate < new Date() : false;
   }
 
   getUpcomingTrips = (trips: Trip[]): Trip[] => {
@@ -22,9 +22,13 @@ export class TripsUtilsService {
   }
 
   private isArrivalInMoreThan7Days = (trip: Trip): boolean => {
-    const msForArrival = new Date(trip.arrival_date).getTime() - new Date().getTime();
-    const daysForArrival = Math.round(msForArrival / this.MILLISECONDS_IN_DAY);
-    return daysForArrival > 7;
+    if(trip.arrivalDate) {
+      const msForArrival = trip.arrivalDate.getTime() - new Date().getTime();
+      const daysForArrival = Math.round(msForArrival / this.MILLISECONDS_IN_DAY);
+      return daysForArrival > 7;
+    } else {
+      return false;
+    }
   }
 
   getCurrentTrips = (trips: Trip[]): Trip[] => {
@@ -32,10 +36,14 @@ export class TripsUtilsService {
   }
 
   private isCurrentTrip = (trip: Trip): boolean => {
-    const msForArrival = new Date(trip.arrival_date).getTime() - new Date().getTime();
-    const daysForArrival = Math.round(msForArrival / this.MILLISECONDS_IN_DAY);
-    const isDepartureInTheFuture = new Date(trip.arrival_date) > new Date();
-    return (daysForArrival <= 7) && isDepartureInTheFuture
+    if (trip.arrivalDate) {
+      const msForArrival = trip.arrivalDate.getTime() - new Date().getTime();
+      const daysForArrival = Math.round(msForArrival / this.MILLISECONDS_IN_DAY);
+      const isDepartureInTheFuture = trip.arrivalDate > new Date();
+      return (daysForArrival <= 7) && isDepartureInTheFuture
+    } else {
+      return false;
+    }
   }
 
 }

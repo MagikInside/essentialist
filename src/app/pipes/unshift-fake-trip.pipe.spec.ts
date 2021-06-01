@@ -20,7 +20,6 @@ describe('UnshiftFakeTripPipe', () => {
       if(index === 0) {
         expect(trip.hash).toEqual(hash);
       } else {
-        console.log(index, trip.hash, tripsStub[index - 1].hash);
         expect(trip.hash).toEqual(tripsStub[index - 1].hash);
       }
     });

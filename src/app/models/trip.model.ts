@@ -1,9 +1,9 @@
 export interface Trip {
   title: string;
   image: string;
-  visibility_status: string;
-  arrival_date: string;
-  departure_date: string;
+  visibilityStatus: string;
+  arrivalDate: Date | null;
+  departureDate: Date | null;
   hash: string;
   adults: number;
   children: number;

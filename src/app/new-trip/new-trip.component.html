@@ -2,10 +2,10 @@
   <h2>Add Trip</h2>
   <h1>Start planing your next trip</h1>
   <form class="p-input-filled">
-    <p-dropdown  class="input" placeholder="status" [options]="statusOptions" [(ngModel)]="selectedStatus" optionLabel="status" optionValue="status" name="status"></p-dropdown>
+    <p-dropdown  class="input" placeholder="status" [options]="statusOptions" [(ngModel)]="newTrip.visibilityStatus" optionLabel="status" optionValue="status" name="status"></p-dropdown>
     <input class="input" type="text" placeholder="trip title" pInputText>
-    <p-calendar class="left" [(ngModel)]="departure" placeholder="departure" name="departure"></p-calendar>
-    <p-calendar class="right" [(ngModel)]="arrival" placeholder="arrival" name="arrival"></p-calendar>
+    <p-calendar class="left" [(ngModel)]="newTrip.departureDate" placeholder="departure" name="departure"></p-calendar>
+    <p-calendar class="right" [(ngModel)]="newTrip.arrivalDate" placeholder="arrival" name="arrival"></p-calendar>
     <input class="input" type="text" placeholder="destination" pInputText>
     <input class="input" type="text" placeholder="url image" pInputText>
     <div class="button-container">

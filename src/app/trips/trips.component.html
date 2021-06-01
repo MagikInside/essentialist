@@ -3,9 +3,9 @@
     <ng-template let-trip pTemplate="item">
       <div *ngIf="trip.hash!=='New Trip'" class="trip">
         <figure class="trip-img"><img alt="Trip image" src="{{trip.image}}"></figure>
-        <p class="status">{{trip.visibility_status}}</p>
+        <p class="status">{{trip.visibilityStatus}}</p>
         <h3 class="title">{{trip.title}}</h3>
-        <p class="details">{{trip.arrival_date}} to ...</p>
+        <p class="details">{{trip.arrivalDate | date:'MMMM dd'}} to {{trip.departureDate | date:'MMMM dd'}}</p>
         <p class="details">{{trip.adults + trip.infants}} People</p>
       </div>
       <div *ngIf="trip.hash==='New Trip'" class="new-trip">

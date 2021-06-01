@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Trip} from '../models/trip.model';
 
 @Component({
   selector: 'app-new-trip',
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewTripComponent implements OnInit {
 
-  constructor() { }
-
+  newTrip: Trip;
   statusOptions = [{status: 'itinerary'}, {status: 'proposal'}];
-  selectedStatus = '';
-  departure = null;
-  arrival = null;
+
+  constructor() {
+    this.newTrip =  {hash: '', image: '', visibilityStatus: '', arrivalDate: null, departureDate: null, title: '', adults: 0, children: 0, infants: 0 }
+  }
+
 
   ngOnInit(): void {
   }
