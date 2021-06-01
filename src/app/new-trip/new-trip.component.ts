@@ -15,8 +15,10 @@ export class NewTripComponent implements OnInit {
     this.newTrip =  {hash: '', image: '', visibilityStatus: '', arrivalDate: null, departureDate: null, title: '', adults: 0, children: 0, infants: 0 }
   }
 
-
   ngOnInit(): void {
   }
 
+  submit(valid: boolean | null) {
+
+  }
 }
