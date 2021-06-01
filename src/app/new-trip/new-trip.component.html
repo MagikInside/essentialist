@@ -2,12 +2,13 @@
   <h2>Add Trip</h2>
   <h1>Start planing your next trip</h1>
   <form class="p-input-filled">
-    <p-dropdown  class="input" placeholder="status" [options]="statusOptions" [(ngModel)]="newTrip.visibilityStatus" optionLabel="status" optionValue="status" name="status"></p-dropdown>
-    <input class="input" type="text" placeholder="trip title" pInputText>
-    <p-calendar class="left" [(ngModel)]="newTrip.departureDate" placeholder="departure" name="departure"></p-calendar>
-    <p-calendar class="right" [(ngModel)]="newTrip.arrivalDate" placeholder="arrival" name="arrival"></p-calendar>
-    <input class="input" type="text" placeholder="destination" pInputText>
-    <input class="input" type="text" placeholder="url image" pInputText>
+    <p-dropdown [ngClass]="{'warning': visibilityStatus.touched}" class="input" placeholder="status" [options]="statusOptions" [(ngModel)]="newTrip.visibilityStatus"
+                 optionLabel="status" optionValue="status" name="visibilityStatus" #visibilityStatus="ngModel"></p-dropdown>
+    <input [ngClass]="{'warning': title.touched}" class="input" type="text" placeholder="trip title" [(ngModel)]="newTrip.title" name="title" pInputText #title="ngModel">
+    <p-calendar [ngClass]="{'warning': departureDate.touched}" class="left" [(ngModel)]="newTrip.departureDate" placeholder="departure" name="departure" #departureDate="ngModel"></p-calendar>
+    <p-calendar [ngClass]="{'warning': arrivalDate.touched}" class="right" [(ngModel)]="newTrip.arrivalDate" placeholder="arrival" name="arrival" #arrivalDate="ngModel"></p-calendar>
+    <input  [ngClass]="{'warning': destination.touched}" class="input" type="text" placeholder="destination" [(ngModel)]="newTrip.hash" name="destination" pInputText #destination="ngModel">
+    <input  [ngClass]="{'warning': image.touched}" class="input" type="text" placeholder="url image" [(ngModel)]="newTrip.image" name="image" pInputText #image="ngModel">
     <div class="button-container">
       <a [routerLink]="['/new-trip']" class="save">SAVE</a>
     </div>
