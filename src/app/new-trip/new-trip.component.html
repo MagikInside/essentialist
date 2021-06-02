@@ -1,18 +1,31 @@
 <main id="new-trip-form">
-  <h2>Add Trip</h2>
-  <h1>Start planing your next trip</h1>
-  <form class="p-input-filled" name="form" #form="ngForm">
-    <p-dropdown [required]="true" [ngClass]="{'warning': visibilityStatus.touched && visibilityStatus.pristine}" class="input" placeholder="status" [options]="statusOptions" [(ngModel)]="newTrip.visibilityStatus"
-                 optionLabel="status" optionValue="status" name="visibilityStatus" #visibilityStatus="ngModel"></p-dropdown>
-    <input [required]="true" [ngClass]="{'warning': title.touched && title.pristine}" class="input" type="text" placeholder="trip title" [(ngModel)]="newTrip.title" name="title" pInputText #title="ngModel">
-    <p-calendar [required]="true" [ngClass]="{'warning': departureDate.touched && departureDate.pristine}" class="left" [(ngModel)]="newTrip.departureDate" placeholder="departure" name="departure" #departureDate="ngModel"></p-calendar>
-    <p-calendar [required]="true" [ngClass]="{'warning': arrivalDate.touched && arrivalDate.pristine}" class="right" [(ngModel)]="newTrip.arrivalDate" placeholder="arrival" name="arrival" #arrivalDate="ngModel"></p-calendar>
-    <input  [required]="true" [ngClass]="{'warning': destination.touched && destination.pristine}" class="input" type="text" placeholder="destination" [(ngModel)]="newTrip.hash" name="destination" pInputText #destination="ngModel">
-    <input [required]="true" [ngClass]="{'warning': image.touched && image.pristine}" class="input" type="text" placeholder="url image" [(ngModel)]="newTrip.image" name="image" pInputText #image="ngModel">
+  <section *ngIf="!showResult" id="form-container">
+    <h2>Add Trip</h2>
+    <h1>Start planing your next trip</h1>
+    <form class="p-input-filled" name="form" #form="ngForm">
+      <p-dropdown [required]="true" [ngClass]="{'warning': visibilityStatus.touched && visibilityStatus.pristine}" class="input" placeholder="status" [options]="statusOptions" [(ngModel)]="newTrip.visibilityStatus"
+                  optionLabel="status" optionValue="status" name="visibilityStatus" #visibilityStatus="ngModel"></p-dropdown>
+      <input [required]="true" [ngClass]="{'warning': title.touched && title.pristine}" class="input" type="text" placeholder="trip title" [(ngModel)]="newTrip.title" name="title" pInputText #title="ngModel">
+      <p-calendar [required]="true" [ngClass]="{'warning': departureDate.touched && departureDate.pristine}" class="left" [(ngModel)]="newTrip.departureDate" placeholder="departure" name="departure" #departureDate="ngModel"></p-calendar>
+      <p-calendar [required]="true" [ngClass]="{'warning': arrivalDate.touched && arrivalDate.pristine}" class="right" [(ngModel)]="newTrip.arrivalDate" placeholder="arrival" name="arrival" #arrivalDate="ngModel"></p-calendar>
+      <input  [required]="true" [ngClass]="{'warning': destination.touched && destination.pristine}" class="input" type="text" placeholder="destination" [(ngModel)]="newTrip.hash" name="destination" pInputText #destination="ngModel">
+      <input [required]="true" [ngClass]="{'warning': image.touched && image.pristine}" class="input" type="text" placeholder="url image" [(ngModel)]="newTrip.image" name="image" pInputText #image="ngModel">
+      <div class="button-container">
+        <a [routerLink]="['/new-trip']" [ngClass]="{'disabled': !form.valid}"
+           (click)="submit(form.valid)" class="save">save</a>
+      </div>
+    </form>
+  </section>
+  <section *ngIf="showResult" id="form-result">
+    <h2>New Trip</h2>
+    <h1>{{newTrip.title}}</h1>
+    <p>Your new trip has been succesfully</p>
+    <p>submitted to your Travel Designer that</p>
+    <p>will contact you in a short time.</p>
     <div class="button-container">
-      <a [routerLink]="['/new-trip']" [ngClass]="{'disabled': !form.valid}"
-      (click)="submit(form.valid)" class="save">save</a>
+      <a class="back" [routerLink]="['']">Back to my Trips</a>
     </div>
-  </form>
+  </section>
 </main>
 
+i

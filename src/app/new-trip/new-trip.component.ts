@@ -10,6 +10,7 @@ export class NewTripComponent implements OnInit {
 
   newTrip: Trip;
   statusOptions = [{status: 'itinerary'}, {status: 'proposal'}];
+  showResult = false;
 
   constructor() {
     this.newTrip =  {hash: '', image: '', visibilityStatus: '', arrivalDate: null, departureDate: null, title: '', adults: 0, children: 0, infants: 0 }
@@ -19,6 +20,8 @@ export class NewTripComponent implements OnInit {
   }
 
   submit(valid: boolean | null) {
-
+    if(valid) {
+      this.showResult = true;
+    }
   }
 }
