@@ -33,7 +33,7 @@ export class TripsFacadeService {
   }
 
   addTrip(trip: Trip) {
-    const newTrips = [...this.#state.trips.results, trip];
+    const newTrips = [trip, ...this.#state.trips.results, ];
     this.store.next({trips: {...this.#state.trips, count: this.#state.trips.count + 1, results: newTrips }});
   }
 

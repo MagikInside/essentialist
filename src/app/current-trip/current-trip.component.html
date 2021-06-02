@@ -1,0 +1,22 @@
+<div id="current-trip">
+  <figure *ngIf="trips && trips[0]; else elseBlock">
+    <img alt="On going trip image" src="{{trips[0]!.image}}">
+    <figcaption *ngIf="trips && trips[0]; else elseBlock">
+      <p class="state">On Going</p>
+      <h1>{{trips[0]!.title}}</h1>
+      <p class="details">{{trips[0]!.arrivalDate | formatTripDates: trips[0]!.departureDate}}</p>
+      <p class="details">{{trips[0]!.adults +  trips[0]!.children}} People</p>
+    </figcaption>
+  </figure>
+  <ng-template #elseBlock>
+    <figure>
+      <img alt="On going trip image" src="http://res.cloudinary.com/thebellhop/image/upload/v1603362856/nkhnbhsufrfpdvzt6l3q.jpg">
+      <figcaption>
+        <p class="state">On Going</p>
+        <h1>AUSTRALIA</h1>
+        <p class="details">July 8th to 12th, 2021</p>
+        <p class="details">2 People</p>
+      </figcaption>
+    </figure>
+  </ng-template>
+</div>

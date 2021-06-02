@@ -10,6 +10,8 @@ import {AccordionModule} from 'primeng/accordion';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CarouselModule} from 'primeng/carousel';
 import {UnshiftFakeTripPipe} from './pipes/unshift-fake-trip.pipe';
+import { CurrentTripComponent } from './current-trip/current-trip.component';
+import { FormatTripDatesPipe } from './pipes/format-trip-dates.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {UnshiftFakeTripPipe} from './pipes/unshift-fake-trip.pipe';
     HeaderComponent,
     TripDetailsComponent,
     TripsComponent,
-    UnshiftFakeTripPipe
+    UnshiftFakeTripPipe,
+    CurrentTripComponent,
+    FormatTripDatesPipe
   ],
   imports: [
     BrowserModule,
