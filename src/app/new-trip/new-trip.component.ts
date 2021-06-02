@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Trip} from '../models/trip.model';
+import {TripsFacadeService} from '../trips-facade.service';
 
 @Component({
   selector: 'app-new-trip',
@@ -12,7 +13,7 @@ export class NewTripComponent implements OnInit {
   statusOptions = [{status: 'itinerary'}, {status: 'proposal'}];
   showResult = false;
 
-  constructor() {
+  constructor(private tripsFacade: TripsFacadeService) {
     this.newTrip =  {hash: '', image: '', visibilityStatus: '', arrivalDate: null, departureDate: null, title: '', adults: 0, children: 0, infants: 0 }
   }
 
@@ -22,6 +23,7 @@ export class NewTripComponent implements OnInit {
   submit(valid: boolean | null) {
     if(valid) {
       this.showResult = true;
+      this.tripsFacade.addTrip(this.newTrip);
     }
   }
 }

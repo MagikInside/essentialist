@@ -10,11 +10,13 @@ import {Trip} from '../models/trip.model';
 })
 export class MainComponent implements OnInit {
 
+  currentTrip$: Observable<Trip[]>;
   upcomingTrip$: Observable<Trip[]>;
   pastTrip$: Observable<Trip[]>;
 
 
   constructor(private tripsFacade: TripsFacadeService) {
+    this.currentTrip$ = tripsFacade.currentTrip$;
     this.upcomingTrip$ = tripsFacade.upcomingTrip$;
     this.pastTrip$ = tripsFacade.pastTrip$;
   }

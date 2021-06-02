@@ -32,4 +32,9 @@ export class TripsFacadeService {
     this.currentTrip$= this.trip$.pipe(map(this.utils.getCurrentTrips));
   }
 
+  addTrip(trip: Trip) {
+    const newTrips = [...this.#state.trips.results, trip];
+    this.store.next({trips: {...this.#state.trips, count: this.#state.trips.count + 1, results: newTrips }});
+  }
+
 }
