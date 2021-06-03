@@ -1,47 +1,48 @@
-#header-container
+\:host
   width: 100%
   position: fixed
   background-color: transparent
   top: 0
   left: 0
   z-index: 1
-  #main-header
-    display: flex
-    align-items: center
-    justify-content: space-between
-    margin: 0 auto
-    border-bottom: 1px solid #d5d5d5
-    width: 100%
-    max-width: 1250px
-    font-weight: 100
-    a
-      text-decoration: none
-    #main-logo
-      font-family: Dorsa,Arial,sans-serif
-      font-size: 3rem
-      line-height: 1
-      color: white
-      letter-spacing: 0.15rem
-      text-transform: capitalize
-      &::first-letter
-        font-size: 6rem
-
-    #header-elements
+  #header-container
+    #main-header
       display: flex
-      span, a
-        font-family: Radley, serif
-        padding: 0 10px
+      align-items: center
+      justify-content: space-between
+      margin: 0 auto
+      border-bottom: 1px solid #d5d5d5
+      width: 100%
+      max-width: 1250px
+      font-weight: 100
+      a
+        text-decoration: none
+      #main-logo
+        font-family: Dorsa,Arial,sans-serif
+        font-size: 3rem
+        line-height: 1
         color: white
-      .welcome
-        border-right: 1px solid #d5d5d5
-        font-style: italic
-      .messages
-        border-left: 1px solid #d5d5d5
-      nav a
-        &.active
+        letter-spacing: 0.15rem
+        text-transform: capitalize
+        &::first-letter
+          font-size: 6rem
+
+      #header-elements
+        display: flex
+        span, a
+          font-family: Radley, serif
+          padding: 0 10px
+          color: white
+        .welcome
+          border-right: 1px solid #d5d5d5
           font-style: italic
-        &:hover
-          color: black
+        .messages
+          border-left: 1px solid #d5d5d5
+        nav a
+          &.active
+            font-style: italic
+          &:hover
+            color: black
 
 
 

@@ -26,6 +26,7 @@ import { FormatTripDatesPipe } from './pipes/format-trip-dates.pipe';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AccordionModule,
