@@ -24,6 +24,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class HeaderComponent implements OnInit {
 
   @Input() scroll: Direction | null = Direction.Up;
+  @Input() darkColor: boolean | null = false;
 
   @HostBinding('@toggle')
   get toggle(): VisibilityState {
