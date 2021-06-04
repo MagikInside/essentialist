@@ -10,6 +10,19 @@ export class TripsComponent implements OnInit {
 
   @Input() trips: Trip[] | null = [];
 
+  responsiveOptions = [
+    {
+      breakpoint: '1325px',
+      numVisible: 2,
+      numScroll: 2
+    },
+    {
+      breakpoint: '900px',
+      numVisible: 1,
+      numScroll: 1
+    },
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 <section>
-  <p-carousel [value]="trips!" [numVisible]="3" [numScroll]="3">
+  <p-carousel [value]="trips!" [numVisible]="3" [numScroll]="3" [responsiveOptions]="responsiveOptions">
     <ng-template let-trip pTemplate="item">
       <div *ngIf="trip.hash!=='New Trip'" class="trip">
         <figure class="trip-img"><img alt="Trip image" src="{{trip.image}}"></figure>

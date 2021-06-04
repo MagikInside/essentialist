@@ -36,7 +36,6 @@ section
     right: -35px
   ::ng-deep.p-carousel-indicators
     display: none
-
   .new-trip
     width: 40rem
     height: 38rem
@@ -66,3 +65,19 @@ section
         background-color: #868686
 ::ng-deep.p-accordion-content
   padding: 0 !important
+
+
+
+@media (max-width: 1325px)
+  section ::ng-deep.p-carousel-prev
+    position: inherit
+    left: 0
+  section ::ng-deep.p-carousel-next
+    position: inherit
+    right: -0
+  section .trip, section .new-trip
+    width: 100%
+@media (max-width: 900px)
+    section .trip, section .new-trip
+      width: 100%
+
