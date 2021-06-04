@@ -8,7 +8,9 @@
         <a class="active" href="/">My Trips</a>
         <a href="/">My Profile</a>
       </nav>
-      <span class="messages">💬</span>
+      <span class="messages"><i  pBadge severity="warning" class="pi pi-comment"></i></span>
+      <p-menu #menu [popup]="true" [model]="items"></p-menu>
+      <i class="hamburger pi pi-bars" (click)="menu.toggle($event)"></i>
     </section>
   </div>
 </header>

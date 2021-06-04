@@ -2,6 +2,7 @@ import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {Direction} from '../models/direction.enum';
 import {Visibility} from '../models/visibility.enum';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-header',
@@ -25,6 +26,12 @@ export class HeaderComponent implements OnInit {
 
   @Input() scroll: Direction | null = Direction.Up;
   @Input() darkColor: boolean | null = false;
+  items: MenuItem[] = [
+    {label: 'The Travel Dispatch'},
+    {label: 'My Trips', styleClass: 'active'},
+    {label: 'My Profile'},
+    {label: 'Messages', icon: 'pi pi-comment'},
+  ];
 
   @HostBinding('@toggle')
   get toggle(): VisibilityState {

@@ -12,6 +12,9 @@ import {CarouselModule} from 'primeng/carousel';
 import {UnshiftFakeTripPipe} from './pipes/unshift-fake-trip.pipe';
 import { CurrentTripComponent } from './current-trip/current-trip.component';
 import { FormatTripDatesPipe } from './pipes/format-trip-dates.pipe';
+import {MenuModule} from 'primeng/menu';
+import {ButtonModule} from 'primeng/button';
+import {BadgeModule} from 'primeng/badge';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { FormatTripDatesPipe } from './pipes/format-trip-dates.pipe';
     AppRoutingModule,
     BrowserAnimationsModule,
     AccordionModule,
-    CarouselModule
+    CarouselModule,
+    MenuModule,
+    ButtonModule,
+    BadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
