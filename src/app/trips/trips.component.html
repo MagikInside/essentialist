@@ -2,7 +2,7 @@
   <p-carousel [value]="trips!" [numVisible]="3" [numScroll]="3" [responsiveOptions]="responsiveOptions">
     <ng-template let-trip pTemplate="item">
       <div *ngIf="trip.hash!=='New Trip'" class="trip">
-        <figure class="trip-img"><img alt="Trip image" src="{{trip.image}}"></figure>
+        <figure class="trip-img"><img alt="Trip image" loading=lazy src="{{trip.image}}"></figure>
         <p class="status">{{trip.visibilityStatus}}</p>
         <h3 class="title">{{trip.title}}</h3>
         <p class="details">{{trip.arrivalDate | date:'MMMM dd'}} to {{trip.departureDate | date:'MMMM dd'}}</p>

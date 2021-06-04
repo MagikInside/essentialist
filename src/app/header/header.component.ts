@@ -1,4 +1,4 @@
-import {Component, HostBinding, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostBinding, Input, OnInit} from '@angular/core';
 import {Direction} from '../models/direction.enum';
 import {Visibility} from '../models/visibility.enum';
 import {animate, state, style, transition, trigger} from '@angular/animations';
@@ -6,6 +6,7 @@ import {MenuItem} from 'primeng/api';
 
 @Component({
   selector: 'app-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.sass'],
   animations: [
@@ -35,11 +36,7 @@ export class HeaderComponent implements OnInit {
 
   @HostBinding('@toggle')
   get toggle(): VisibilityState {
-    if (window.pageYOffset === 0) {
-      return Visibility.Visible;
-    } else {
-      return this.scroll === Direction.Up ? Visibility.Visible : Visibility.Hidden;
-    }
+      return this.scroll === Direction.Down ? Visibility.Hidden : Visibility.Visible;
   }
 
   constructor() { }

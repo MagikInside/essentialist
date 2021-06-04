@@ -1,8 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {Trip} from '../models/trip.model';
 
 @Component({
   selector: 'app-trips',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './trips.component.html',
   styleUrls: ['./trips.component.sass']
 })

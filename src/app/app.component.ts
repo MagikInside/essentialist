@@ -28,7 +28,4 @@ export class AppComponent {
       map( e => {console.log(e);return this.DARK_COLOR_HEADER_ROUTES.includes((e as NavigationStart).url)})
     )
   }
-
-
-
 }
