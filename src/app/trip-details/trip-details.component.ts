@@ -17,6 +17,7 @@ export class TripDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private tripsFacade: TripsFacadeService) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.tripDetail$ = this.route.paramMap.pipe(
       switchMap(params => this.tripsFacade.trip$.pipe(
           map(trips => trips.filter(trip => trip.hash === params.get('hash'))),

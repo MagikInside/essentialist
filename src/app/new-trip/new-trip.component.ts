@@ -19,6 +19,7 @@ export class NewTripComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
 
   submit(valid: boolean | null) {
