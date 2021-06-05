@@ -16,6 +16,7 @@ import {MenuModule} from 'primeng/menu';
 import {ButtonModule} from 'primeng/button';
 import {BadgeModule} from 'primeng/badge';
 import { FooterComponent } from './footer/footer.component';
+import { TripDetailsViewComponent } from './trip-details-view/trip-details-view.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     UnshiftFakeTripPipe,
     CurrentTripComponent,
     FormatTripDatesPipe,
-    FooterComponent
+    FooterComponent,
+    TripDetailsViewComponent
   ],
   imports: [
     BrowserModule,

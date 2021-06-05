@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
 import {Trip} from '../models/trip.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-trips',
@@ -24,9 +25,13 @@ export class TripsComponent implements OnInit {
     },
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  openTrip(hash: string) {
+    this.router.navigate([`trip/${hash}`]);
   }
 
 }

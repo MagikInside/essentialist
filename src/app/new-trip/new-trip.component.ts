@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Trip} from '../models/trip.model';
 import {TripsFacadeService} from '../services/trips-facade.service';
+import {Md5} from 'ts-md5/dist/md5';
 
 @Component({
   selector: 'app-new-trip',
@@ -23,7 +24,9 @@ export class NewTripComponent implements OnInit {
   submit(valid: boolean | null) {
     if(valid) {
       this.showResult = true;
+      this.newTrip.hash = Md5.hashStr(this.newTrip.title + this.newTrip.destination);
       this.tripsFacade.addTrip(this.newTrip);
     }
   }
+
 }

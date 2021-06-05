@@ -1,7 +1,7 @@
 <section>
   <p-carousel [value]="trips!" [numVisible]="3" [numScroll]="3" [responsiveOptions]="responsiveOptions">
     <ng-template let-trip pTemplate="item">
-      <div *ngIf="trip.hash!=='New Trip'" class="trip">
+      <div *ngIf="trip.hash!=='New Trip'" class="trip" (click)="openTrip(trip.hash)">
         <figure class="trip-img"><img alt="Trip image" loading=lazy src="{{trip.image}}"></figure>
         <p class="status">{{trip.visibilityStatus}}</p>
         <h3 class="title">{{trip.title}}</h3>

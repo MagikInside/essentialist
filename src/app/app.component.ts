@@ -10,7 +10,7 @@ import {NavigationStart, Router} from '@angular/router';
   styleUrls: ['./app.component.sass'],
 })
 export class AppComponent {
-  private readonly DARK_COLOR_HEADER_ROUTES = ['/new-trip']
+  private readonly DARK_COLOR_HEADER_ROUTES = ['/new-trip', '/trip']
   scroll$: Observable<Direction>;
   darkColor$: Observable<boolean>
 
@@ -24,8 +24,12 @@ export class AppComponent {
       share()
     );
     this.darkColor$ = router.events.pipe(
-      filter(e  => {return (e instanceof NavigationStart);}),
-      map( e => {console.log(e);return this.DARK_COLOR_HEADER_ROUTES.includes((e as NavigationStart).url)})
+      filter(e  => (e instanceof NavigationStart)),
+      map( e => {
+        return this.DARK_COLOR_HEADER_ROUTES.some(route => {
+          return (e as NavigationStart).url.indexOf(route) === 0;
+        })
+      })
     )
   }
 }
