@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import {Trips} from './models/trips.model';
+import {Trips} from '../models/trips.model';
 import {Observable, of} from 'rxjs';
-import * as myTrips from './stubs/my-trips.json'
+import * as myTrips from '../stubs/my-trips.json'
 import {map} from 'rxjs/operators';
-import {Trip} from './models/trip.model';
-import {DbTrip} from './models/db-trip.model';
-import {DbTrips} from './models/db-trips.model';
+import {Trip} from '../models/trip.model';
+import {DbTrip} from '../models/db-trip.model';
+import {DbTrips} from '../models/db-trips.model';
 
 @Injectable({
   providedIn: 'root'

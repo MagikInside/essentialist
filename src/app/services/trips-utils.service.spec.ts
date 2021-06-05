@@ -1,7 +1,7 @@
-import {tripsStub} from './stubs/trips-stub';
+import {tripsStub} from '../stubs/trips-stub';
 
 import { TripsUtilsService } from './trips-utils.service';
-import {Trip} from './models/trip.model';
+import {Trip} from '../models/trip.model';
 
 describe('TripsUtilsService', () => {
   let service: TripsUtilsService;

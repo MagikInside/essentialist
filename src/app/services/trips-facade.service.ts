@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {TripsService} from './trips.service';
 import {BehaviorSubject, Observable} from 'rxjs';
-import {State} from './models/state.model';
+import {State} from '../models/state.model';
 import {distinctUntilChanged, filter, map} from 'rxjs/operators';
-import {Trip} from './models/trip.model';
+import {Trip} from '../models/trip.model';
 import {TripsUtilsService} from './trips-utils.service';
 
 @Injectable({
