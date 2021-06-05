@@ -57,7 +57,4 @@ describe('Main trips main page', () => {
     cy.get('p-accordiontab:nth-child(2) .trip').first().should('contain', 'Amsterdam')
       .and('be.visible');
   });
-
-
-
 });
