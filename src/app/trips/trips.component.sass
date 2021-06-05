@@ -27,12 +27,6 @@ section
       font-size: 1.6rem
       font-weight: lighter
       margin: 0
-  ::ng-deep.p-accordion-tab-active .p-carousel-prev
-    position: absolute
-    left: -35px
-  ::ng-deep.p-accordion-tab-active .p-carousel-next
-    position: absolute
-    right: -35px
   ::ng-deep.p-carousel-indicators
     display: none
   .new-trip
@@ -64,6 +58,12 @@ section
       &:hover
         background-color: var(--color-grey)
 
+::ng-deep.p-accordion-tab-active .p-carousel-prev
+  position: absolute
+  left: -35px
+::ng-deep.p-accordion-tab-active .p-carousel-next
+  position: absolute
+  right: -35px
 
 @media (max-width: 1325px)
   section ::ng-deep.p-carousel-prev

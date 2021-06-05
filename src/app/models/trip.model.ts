@@ -7,5 +7,6 @@ export interface Trip {
   hash: string;
   adults: number;
   children: number;
-  infants: number
+  infants: number;
+  destination?: string;
 }

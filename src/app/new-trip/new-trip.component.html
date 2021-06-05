@@ -6,9 +6,9 @@
       <p-dropdown [required]="true" [ngClass]="{'warning': visibilityStatus.touched && visibilityStatus.pristine}" class="input" placeholder="status" [options]="statusOptions" [(ngModel)]="newTrip.visibilityStatus"
                   optionLabel="status" optionValue="status" name="visibilityStatus" #visibilityStatus="ngModel"></p-dropdown>
       <input [required]="true" [ngClass]="{'warning': title.touched && title.pristine}" class="input" type="text" placeholder="trip title" [(ngModel)]="newTrip.title" name="title" pInputText #title="ngModel">
-      <p-calendar [required]="true" [ngClass]="{'warning': departureDate.touched && departureDate.pristine}" class="left" [(ngModel)]="newTrip.departureDate" placeholder="departure" name="departure" #departureDate="ngModel"></p-calendar>
-      <p-calendar [required]="true" [ngClass]="{'warning': arrivalDate.touched && arrivalDate.pristine}" class="right" [(ngModel)]="newTrip.arrivalDate" placeholder="arrival" name="arrival" #arrivalDate="ngModel"></p-calendar>
-      <input  [required]="true" [ngClass]="{'warning': destination.touched && destination.pristine}" class="input" type="text" placeholder="destination" [(ngModel)]="newTrip.hash" name="destination" pInputText #destination="ngModel">
+      <p-calendar [required]="true" [ngClass]="{'warning': departureDate.touched && departureDate.pristine}" class="left" [(ngModel)]="newTrip.departureDate" placeholder="departure" name="departure" dateFormat="dd/mm/y" #departureDate="ngModel"></p-calendar>
+      <p-calendar [required]="true" [ngClass]="{'warning': arrivalDate.touched && arrivalDate.pristine}" class="right" [(ngModel)]="newTrip.arrivalDate" placeholder="arrival" name="arrival" dateFormat="dd/mm/y" #arrivalDate="ngModel"></p-calendar>
+      <input  [required]="true" [ngClass]="{'warning': destination.touched && destination.pristine}" class="input" type="text" placeholder="destination" [(ngModel)]="newTrip.destination" name="destination" pInputText #destination="ngModel">
       <input [required]="true" [ngClass]="{'warning': image.touched && image.pristine}" class="input" type="text" placeholder="url image" [(ngModel)]="newTrip.image" name="image" pInputText #image="ngModel">
       <div class="button-container">
         <a [routerLink]="['/new-trip']" [ngClass]="{'disabled': !form.valid}"
