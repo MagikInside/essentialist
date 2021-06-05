@@ -10,7 +10,6 @@ import {Trip} from '../models/trip.model';
 export class CurrentTripComponent implements OnInit {
 
   @Input() trips: Trip[] | null = [];
-  date = new Date();
 
   constructor() { }
 
