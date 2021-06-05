@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Trip} from '../models/trip.model';
-import {TripsFacadeService} from '../trips-facade.service';
+import {TripsFacadeService} from '../services/trips-facade.service';
 
 @Component({
   selector: 'app-new-trip',
